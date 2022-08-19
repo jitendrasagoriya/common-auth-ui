@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "common-admin-ui"
+  "defaultProject": "common-admin-ui",
+  "cli": {
+    "analytics": "cdaebc3b-3fb9-4022-b966-97cf1fd54611"
+  }
 }

@@ -1,0 +1,67 @@
+<!--breadcrumb-->
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="breadcrumb-title pe-3">Helps</div>
+    <div class="ps-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="#" (click)="$event.preventDefault()"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Attendance</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="ms-auto">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Settings</button>
+            <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end">	
+                <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Action</a>
+                <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Another action</a>
+                <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Something else here</a>
+                <div class="dropdown-divider"></div>	
+                <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Separated link</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-xl-9 mx-auto">
+        <h6 class="mb-0 text-uppercase">Monthly</h6>
+        <hr/>
+        <div class="card">
+            <div class="card-body">
+                <table class="table mb-0 table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Work</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Shift</th>
+                            <th scope="col">present</th>
+                            <th scope="col">In Time</th>
+                            <th scope="col">In Out</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let attendance of attendances; let i = index;">
+                            <th scope="row">{{i + 1}}</th>
+                            <td>{{attendance.name}}</td>
+                            <td>{{attendance.helpType|titlecase}}</td>
+                            <td>{{attendance.date|date}} </td>
+                            <td>{{attendance.shiftTime|time24to12Format}} </td>
+                            <td>{{attendance.present}}</td>
+                            <td>{{attendance.inTime|time24to12Format}}</td>
+                            <td>{{attendance.outTime|time24to12Format}}</td>
+                            <td>{{attendance.status}}</td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,9 +31,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/assets/css/icons.css",
+              "node_modules/angular-calendar/css/angular-calendar.css",
+              "node_modules/flatpickr/dist/flatpickr.min.css",
+              "node_modules/angular-notifier/styles.css",
+              "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css",              
+              "src/assets/sass/app.scss",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/plugins/jvector-map/jquery-jvectormap-2.0.2.min.js",
+              "src/assets/plugins/jvector-map/jquery-jvectormap-world-mill-en.js",
+              "src/assets/plugins/datatable/js/jquery.dataTables.min.js",
+              "src/assets/plugins/datatable/js/dataTables.bootstrap5.min.js",
+              "src/assets/vendor/pace/pace.min.js" 
+            ]
           },
           "configurations": {
             "production": {

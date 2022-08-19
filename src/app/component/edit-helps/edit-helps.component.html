@@ -1,0 +1,91 @@
+<notifier-container></notifier-container>
+<!--breadcrumb-->
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+	<div class="breadcrumb-title pe-3">Helps</div>
+	<div class="ps-3">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb mb-0 p-0">
+				<li class="breadcrumb-item"><a href="/"  ><i class="bx bx-home-alt"></i></a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Edit Your Helps Details</li>
+			</ol>
+		</nav>
+	</div> 
+</div>
+<!--end breadcrumb-->
+<div class="row">
+	<div class="col-xl-7 mx-auto">
+		<h6 class="mb-0 text-uppercase">Details Form</h6>
+		<hr/>
+		<div class="card border-top border-0 border-4 border-primary">
+			<div class="card-body p-5">
+				 
+				 
+				<form class="row g-3  needs-validation"  [formGroup]="editForm" (ngSubmit)="onSubmit()"> <!-- Add ReactiveFormsModule in mgModule--> 
+					<div class="col-md-6">
+						<label for="inputFirstName" class="form-label">First Name</label>
+						<input type="text" class="form-control" id="inputFirstName" formControlName="firstname"  required  />
+					</div>
+					<div class="col-md-6">
+						<label for="inputLastName" class="form-label">Last Name</label>
+						<input type="text" class="form-control" id="inputLastName" formControlName="lastname"  required   />
+					</div>
+
+                    <div class="col-md-6">
+						<label for="inputMobile" class="form-label">Mobile</label>
+						<input type="text" class="form-control" id="inputMobile" formControlName="mobile" required placeholder="Please Enter Mobile Number" /> 
+					</div>
+					<div class="col-md-4">
+						<label for="inputHelpType" class="form-label">Help Type</label>
+						<select id="inputHelpType" class="form-select" formControlName="helpType" required placeholder="Please Enter HelpType">
+							<option selected>Choose...</option>
+							<option value="CLOTHS">CLOTHS</option>
+                            <option value="BARTAN">BARTAN</option>
+                            <option value="SAFAI">SAFAI</option>
+                            <option value="MALIS">MALIS</option>
+                            <option value="DRIVER">DRIVER</option>
+                            <option value="FOOD">FOOD</option>
+                            <option value="GUARD">GUARD</option>
+						</select>
+					</div>
+					<div class="col-md-2">
+						<label for="inputSalary" class="form-label">Salary</label>
+						<input type="text" class="form-control" id="inputSalary" formControlName="salary" required  placeholder="Salary" />
+					</div>
+
+                    <div class="col-md-3">
+						<label for="inputMShift" class="form-label">Morning Shift</label>
+						<input type="time" class="form-control" id="inputMShift" formControlName="mShift" />
+					</div>
+
+                    <div class="col-md-3">
+						<label for="inputAShift" class="form-label">AfterNoon Shift</label>
+						<input type="time" class="form-control" id="inputAShift" formControlName="aShift"/>
+					</div>
+
+                    <div class="col-md-3">
+						<label for="inputEShift" class="form-label">Evening Shift</label>
+						<input type="time" class="form-control" id="inputEShift" formControlName="eShift"/>
+					</div>
+
+                    <div class="col-md-3">
+						<label for="inputNShift" class="form-label">Night Shift</label>
+						<input type="time" class="form-control" id="inputNShift" formControlName="nShift"/>
+					</div>
+					 
+					 
+					<div class="col-12">
+						<label for="inputAddress" class="form-label">Address</label>
+						<textarea class="form-control" id="inputAddress" placeholder="Add Address..." rows="3" formControlName="address"></textarea>
+					</div>	
+					
+					<div class="col-12">
+						<button type="submit" [disabled]="submitted" class="btn btn-primary px-5">Update</button>
+					</div>
+				</form>
+			</div>
+		</div> 
+	</div>
+</div>
+<!--end row-->
+ 

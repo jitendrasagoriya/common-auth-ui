@@ -1,0 +1,43 @@
+<!--breadcrumb-->
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+	<div class="breadcrumb-title pe-3">HELPS</div>
+	<div class="ps-3">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb mb-0 p-0">
+				<li class="breadcrumb-item"><a href="dashboard/analytics"  ><i class="bx bx-home-alt"></i></a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Contact List</li>
+			</ol>
+		</nav>
+	</div>
+	 
+</div>
+<!--end breadcrumb-->
+<h6 class="mb-0 text-uppercase">Your Help List</h6>
+<hr/>
+<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">	 
+	<div class="col" *ngFor="let contentEntity of contentEntitys">
+		<div class="card radius-15">
+			<div class="card-body text-center">
+				<div class="p-4 border radius-15">
+					<img src="assets/images/avatars/avatar-2.png" width="110" height="110" class="rounded-circle shadow" alt="">
+					<h5 class="mb-0 mt-5">{{contentEntity.name}}</h5>
+					<p class="mb-3">{{contentEntity.helpType}}</p>					 
+					 <p style="color: red;"> 
+						 |
+						 <ng-container *ngFor="let shift of contentEntity.shifts">
+							 {{shift.time}} |
+						 </ng-container>
+					</p>
+					<div > 
+						<a href="#" class="btn btn-outline-primary radius-15" style="margin: 10px; padding: 5px 20px 5px 20px;" routerLink="/helps/edit/{{contentEntity.id}}">Edit</a>
+						<a href="#" class="btn btn-outline-primary radius-15" style="margin: 10px; padding: 5px 20px 5px 20px;">Delete</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+</div>
+ 
+<!--end row-->
